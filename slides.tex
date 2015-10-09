@@ -1,0 +1,603 @@
+\documentclass[svgnames]{beamer}
+\usepackage{animate}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{changepage}
+\usepackage{subfig}
+\usepackage{threeparttable}
+\usepackage{bbm}
+\usepackage{soul}
+\usepackage{verbatim}
+\usepackage{import}
+\usepackage{bibentry}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\newtheorem{proposition}[theorem]{Proposition}
+
+\setbeamercovered{transparent}
+
+\hypersetup{
+  colorlinks=true,
+  citecolor=blue
+}
+\usepackage[round]{natbib}
+% \usetheme{Singapore}
+% \usecolortheme{rose}
+\usefonttheme{serif}
+\begin{document}
+
+\begin{frame}
+\title {An Entrepreneurship Fiscal Multiplier}
+\author {Wenlan Luo \\ Georgetown University}
+\date{10/9/2015}
+\maketitle
+\end{frame}
+
+\begin{frame}
+\centerline{{\color{blue}Heterogeneity} and {\color{red}Macro Policy}}
+\centerline{{Facts} -- {Mechanism} -- {Policy Implications}}
+\end{frame}
+
+\begin{frame}{{\color{blue}Heterogeneity} and {\color{red}Macro Policy}}
+Facts: {\color{blue} Entrepreneurs} respond differently to {\color{red} Government Spending} compared to other households and firms.
+\end{frame}
+
+\begin{frame}{Fiscal multiplier: identified through recursive ordering}
+{$(log(G),log(Y),MTR,TB3)$,1947I-2008IV}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{../v151001/graph/GYICData.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Entrepreneur fiscal multiplier}
+{$(log(G),log(Y),MTR,TB3)$,1947I-2008IV}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{../v151001/graph/GIData.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Entrepreneur fiscal multiplier: Ramey's pdvmily shock}
+{$(log(G),log(Y),MTR,TB3)$,1947I-2008IV}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{../v151001/graph/GIDataRamey.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Mechanism}
+\begin{itemize}
+\item Government spending is to be financed by tax.
+\item ... Tax generates negative income effects, increases labor supply, and decreases saving.
+\item ... Wage falls and interest rates rise.
+\item ... Entrepreneur sector is more ``labor-intensive''. Profits increase which encourages entry.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mechanism: entrepreneurs use more labor than capital}
+{Fractions of factors used in non-corporate sector}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{graph/klratio.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Mechanism}
+{Why does entrepreneur sector use more labor than capital?}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{graph/wklratio.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Mechanism}
+{Why does entrepreneur sector use more labor than capital?}
+\begin{itemize}
+\item It's not (I'm not assuming) different technology...
+\item Working capital financing is hampered by financial friction...
+\item If this is the case, entrepreneur sector should appear even more ``labor-intensive'' when credit condition is worse...
+\item What's in the data?
+\end{itemize} 
+\end{frame}
+
+\begin{frame}{Mechanism: financial frictions vs labor-intensity}
+{Why does entrepreneur sector use more labor than capital?}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{graph/loan_klratio.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Mechanism}
+\begin{itemize}
+\item Government spending is to be financed by tax.
+\item ... Tax generates negative income effects, increases labor supply, and decreases saving.
+\item ... Wage falls and interest rates rise.
+\item ... Entrepreneur sector is more ``labor-intensive'' due to financial frictions.
+\item ... Profits increase which encourages entry.
+\item ... Anticipating profits increase $\Rightarrow$ Marginal productivity of capital increases $\Rightarrow$ Entrepreneurs increase saving (investment) countering the consumption smoothing incentive from negative income effects.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Quantitative questions}
+Questions:
+\begin{itemize}
+\item Does this mechanism generate qualitative/quantitative results consistent with data?
+\item What are the implications for aggregate response? Does it imply interactions between fiscal policy and other economic conditions?
+\end{itemize}
+Strategy:
+\begin{itemize}
+\item A model featuring entrepreneur entry/saving decision which are affected by financial frictions.
+\item Calibrated to match (1) fraction of factor use; (2) entrepreneur size distribution; (3) wealth distribution.
+\item Feed in government spending shock and inspect the response.
+\item Feed in fluctuations of credit conditions and inspect the interactions.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Quantitative questions}
+Questions:
+\begin{itemize}
+\item Does this mechanism generate qualitative/quantitative results consistent with data?
+\item What are the implications for aggregate response? Does it imply interactions between fiscal policy and other economic conditions?
+\end{itemize}
+Answers:
+\begin{itemize}
+\item Model generates responses of entrepreneur entry and investment consistent with data.
+\item Generates a sizable output fiscal multiplier close to data, without any Keynesian features.
+\item Both entrepreneur and output multipliers are greater when credit is tighter.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Related literature}
+\begin{itemize}
+\item {\color{blue} Transmission mechanism of fiscal policy.} \citet{hall_by_2009}, \citet{dyrda_models_2012}, \citet{heathcote_fiscal_2005}, \citet{bachmann_welfare_2013}.
+\item {\color{blue} Entrepreneurial activity.} \citet{decker_role_2014}, \citet{quadrini_entrepreneurship_2000}, \citet{cagetti_entrepreneurship_2006}, \citet{buera_finance_2011}.
+\item {\color{blue} State-dependent effects of government spending.} \citet{auerbach_measuring_2012}, \citet{owyang_are_2013}, \citet{fazzari_state-dependent_2015}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Entrepreneur fiscal multiplier}
+{Response to +G shock at period 1}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{../v151001/graph/GIModel.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Entrepreneur fiscal multiplier}
+{Response to +G shock at period 1}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{../v151001/graph/GIModelVsData.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Entrepreneur fiscal multiplier: Mechanism}
+{Response to +G shock at period 1}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{../v151001/graph/NwrPi.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Mechanism: Wealth distribution and occupation choice}
+  \begin{center} 
+    \animategraphics[controls,width=4.1in]{5}{../v151001/graph/dist}{1}{21}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Output multiplier}
+{Response to +G shock at period 1}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{../v151001/graph/YZModel.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Output multiplier: heterogeneity matters}
+{Response to +G shock at period 1}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{../v151001/graph/YRAModel.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{State-dependent multiplier}
+{Response to -$\lambda$ shock at period 1, +G shock at period 2}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{../v151001/graph/LambdaModel.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{State-dependent multiplier}
+{Response to +G shock, no $\lambda$ shock V.S. $-\lambda$ shock}
+\begin{figure}[!ht]
+\includegraphics[width=1\textwidth]{../v151001/graph/LambdaGDiffModel.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Entrepreneur multiplier}
+\begin{figure}[!ht]
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=0.9\textwidth]{graph/entre.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Entrepreneur multiplier: Ramey}
+\begin{figure}[!ht]
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=0.9\textwidth]{graph/entre_ramey.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Measure of credit tightness}
+Following \citet{lown_credit_2006}:
+\begin{figure}%
+    \centering
+    \subfloat[NFCI Credit Subindex]{{\includegraphics[width=5cm]{graph/loan_credit.pdf} }}%
+    \qquad
+    \subfloat[Standards: Net \% Tightning]{{\includegraphics[width=5cm]{graph/loan_tightning.pdf} }}%
+    \caption{2 C\&I Loan Growth Compared to Other Measures of Credit Tightness}%
+    \label{fig:example}%
+\end{figure}
+\end{frame}
+
+\begin{frame}{STVAR and state-dependent response}
+Following \citet{auerbach_measuring_2012}:
+\begin{figure}[!ht]
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=0.9\textwidth]{graph/GShockResStateData.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Mechanism: credit tightness and entrepreneur factor share}
+\begin{figure}%
+    \centering
+    \subfloat[Noncorporate Factor Share]{{\includegraphics[width=5cm]{graph/klratio.pdf} }}%
+    \qquad
+    \subfloat[Tightness v.s. Factor Share]{{\includegraphics[width=5cm]{graph/loan_klratio.pdf} }}%
+    \caption{Capital share is lower when credit is tighter}%
+    \label{fig:example}%
+\end{figure}
+\end{frame}
+
+\begin{frame}{Model}
+\begin{itemize}
+\item Occupation choice model: Quadrini (2000), Cagetti and De Nardi (2006), \citet{buera_finance_2011}
+\item Augmented with endogenous labor supply and aggregate shocks (TFP, credit, and government spending shocks)
+\item Government spending is unproductive, financed using debt and tax. Bachmann et al. (2015)
+\item Mechanism:
+\begin{itemize}
+\item Government spending shock encourages labor supply through wealth effects, lowers wages, and drives up interest rates.
+\item Entrepreneurs face credit constraints, which implies (1) profit and production scale are constrained by the {\bf quantity} of capital, and the {\bf price} of labor; (2) capital labor ratio is lower than corporate sector.
+\item Lower wage and higher interest rate increase profit, and therefore encourages entry. Effects are larger when credit is tighter because capital labor share is even lower.
+\item Future production scale increases, return to saving increases, encourages entrepreneur saving.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Household's problem}
+Individual states: $x=(\varepsilon,\zeta,a)$, aggregate states: $\Pi=(z,\lambda,G,B,\Phi)$
+$$
+V(x,\Pi)=E_{\eta}[\max \{V^W(x,\Pi),V^E(x,\Pi)+\eta\}]
+$$
+Worker:
+$$
+V^W(x,\Pi)=\max_{c,n,a'}u(c,n)+\beta EV(x',\Pi')
+$$
+s.t.
+$$
+\begin{aligned}
+& c+a' \leq a(1+r(\Pi)) + w(\Pi)\varepsilon n - Tax(\Pi)\\
+& a'\geq 0,0\leq n\leq 1
+\end{aligned}
+$$
+\end{frame}
+
+\begin{frame}{Household's problem}
+Individual states: $x=(\varepsilon,\zeta,a)$, aggregate states: $\Pi=(z,\lambda,G,B,\Phi)$
+$$
+V(x,\Pi)=E_{\eta}[\max \{V^W(x,\Pi),V^E(x,\Pi)+\eta\}]
+$$
+Entrepreneur:
+$$
+V^E(x,\Pi)=\max_{c,n,a',k_E,n_E}u(c,n)+\beta EV(x',\Pi')
+$$
+s.t.
+$$
+\begin{aligned}
+& c+a' \leq \pi\\
+& \pi= z \zeta (k_E^{\gamma}(n_E+\varepsilon n)^{1-\gamma})^{\theta} + (1-\delta)k_E - (1+r(\Pi))(k_E-a) \\
+& \quad \quad - w(\Pi)n_E - Tax(\Pi)\\
+& k_E \leq (1+\lambda)a \\
+& a'\geq 0,0\leq n\leq 1
+\end{aligned}
+$$
+\end{frame}
+
+\begin{frame}{Government's budget (transition rule of B')}
+Bachmann et al. (2015). Key assumption: state-contingent return of government bond.
+$$
+\frac{Tax(\Pi)}{Y(\Pi)} = \rho_0 + \rho_1*\frac{B}{Y(\Pi)} +\rho_2*\frac{G}{Y(\Pi)}
+$$
+$$
+B'(\Pi) = (1+r(\Pi))*B + G - Tax(\Pi)
+$$
+\end{frame}
+
+\begin{frame}{Definition of recursive equilibrium}
+A recursive equilibrium is: value function $\{V(x,\Pi), V^W(x,\Pi), V^E(x,\Pi)\}$, policy function $\{a'(x,\Pi),n(x,\Pi),k_E(x,\Pi),n_E(x,\Pi),\mathbf{1}^E(x,\Pi)\}$, prices and taxes $\{r(\Pi),w(\Pi),Tax(\Pi)\}$, transition of distribution $\Phi' = H(\Pi)$
+\begin{itemize}
+\item $r(\Pi)=\gamma z(\frac{K_C(\Pi)}{L_C(\Pi)})^{\gamma-1}-\delta$;
+$w(\Pi)=(1-\gamma) z(\frac{K_C(\Pi)}{L_C(\Pi)})^\gamma$
+\item $\int k_E(x,\Pi) \ d\Phi(x) + K_C(\Pi) + B = \int a(x,\Pi) \ d\Phi(x)$
+\item $\int n_E(x,\Pi) \ d\Phi(x) + L_C(\Pi) = \int n(x,\Pi)(1-\mathbf{1}^E(x,\Pi)) \ d\Phi(x)$
+\item Transition of B' described before
+\item Transition of $\Phi$ consistent.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Partial equilibrium analytical results}
+Assume $n=0$ for entrepreneurs. Fix aggregate states $\Pi$,
+
+Denote entrepreneur profit
+$\pi(x;K_C,L_C,\lambda)= \max_{k_E,n_E} z \zeta (k_E^{\gamma}n_E^{1-\gamma})^{\theta} - (r+\delta)k_E- wn_E$, s.t. $k_E \leq (1+\lambda)a$
+
+$r=\gamma z(\frac{K_C}{L_C})^{\gamma-1}-\delta$, $w=(1-\gamma) z(\frac{K_C}{L_C})^\gamma$
+\begin{proposition}
+$\forall s=(x,K_C,L_C)$, $\exists \bar{\lambda}(s)$, s.t.
+\begin{enumerate}
+\item $\forall \lambda \geq \bar{\lambda}(s)$, $\frac{k_E(s,\lambda)}{n_E(s,\lambda)}=\frac{K_C}{L_C}$
+\item $\forall \lambda < \bar{\lambda}(s)$, $\frac{k_E(s,\lambda)}{n_E(s,\lambda)}<\frac{K_C}{L_C}$ and is strictly increasing in $\lambda$
+\item $\forall \lambda \geq \bar{\lambda}(s)$, $\frac{\partial \pi(s,\lambda)}{\partial L_C}=0$
+\item $\forall \lambda < \bar{\lambda}(s)$, $\frac{\partial \pi(s,\lambda)}{\partial L_C}>0$
+\end{enumerate}
+\end{proposition}
+\end{frame}
+
+\begin{frame}{Full model solution}
+Following \citet{krusell_income_1998}, track $\Phi$ using $\bar{K}$. $\Phi = (z,G,\bar{K},B)$.
+
+Approximate transition rule using polynomials of $(\bar{K},B)$.
+
+$$
+\begin{aligned}
+log(\bar{K'}) = b_{1,0}(z,G,\lambda) + b_{1,1}log(\bar{K}) + b_{1,2}B + b_{1,3}B^2 + b_{1,4}B^3 \\ 
+log(r+\delta) = b_{2,0} + b_{2,1}log(\bar{K}) + b_{2,2}B + b_{2,3}B^2 + b_{1,4}B^3 \\ 
+log(w) = b_{3,0} + b_{3,1}log(\bar{K}) + b_{3,2}B + b_{3,3}B^2 + b_{3,4}B^3 \\ 
+log(Tr) = b_{4,0} + b_{4,1}log(\bar{K}) + b_{4,2}B + b_{4,3}B^2 + b_{4,4}B^3 \\ 
+\end{aligned}
+$$
+\end{frame}
+
+\begin{frame}{Calibration: parameters fixed exogenously}
+$u=\frac{c^{1-\sigma}}{1-\sigma}-\chi \frac{n^{1+1/ \nu}}{1+1 / \nu}$, $\sigma=2$, $\nu=0.5$
+
+$F(K_C,L_C) = zK_C^{\gamma}L_C^{1-\gamma}$, $\gamma=0.33$
+
+$\varepsilon$, $\varepsilon'=\rho_{\varepsilon}\varepsilon + e'$, $\rho_{\varepsilon}=0.94$,$\sigma^2_{\varepsilon}=0.01$
+
+$z$, $\rho_z=0.9$, $\sigma_z=0.01$
+
+$G$, Bachmann et al. (2015)
+
+$\eta$, Gumbel distribution with scale parameter 1
+\end{frame}
+
+\begin{frame}{Calibration: parameters calibrated to match moments}
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{ccccc}
+    \toprule
+    Parameters & Value & Target & Data  & Model \\
+    \midrule
+    $\delta$ & 0.0157 & r     & 0.0125 & 0.0125 \\
+    $\beta$ & 0.9768 & K/Y &  10.6 & 10.51 \\
+    $\chi$ & 51.0788  & $\bar{n_w}$ & 0.33  & 0.33 \\
+    \midrule
+    $p_1$ & 0.0023  & \% Entrepreneurs & 0.0755  & 0.0755 \\
+    $p_2$ & 0.9808 & Gini & 0.81 & 0.80 \\
+    $\mu_{\zeta}$ & 0.4172     & \% Size 1-5 & 0.7568 & 0.7510 \\
+    $\sigma_{\zeta}$ & 0.3843 & \% Size 6-10 & 0.1124 & 0.1460 \\
+    \midrule
+    $\theta$ & 0.7131 & Capital share & 0.1780 & 0.1779 \\
+    $\lambda$ & 1.1481 & Labor share & 0.2180  & 0.2189 \\
+    \midrule
+    $Tax$ & 0.2497 & G/Y & 0.2086 & 0.2080 \\
+    Government Bond & 0.3597 & B/Y & 0.3000 & 0.2996 \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+\end{frame}
+
+\begin{frame}{Calibration: size and wealth distribution}
+Size of entrepreneur firms measured by employment level, KFS
+\begin{table}[htbp]
+  \centering
+  
+    \begin{tabular}{cccccc}
+    \toprule
+    & 1-4 & 5-9 & 10-19 & 20-99 & 100+ \\
+    Data & 75.1 & 14.6 &  6.6  & 3.5  & 0.3 \\
+    Model & 75.6 & 11.2 & 6.5 & 6.2 & 0.2 \\
+    \bottomrule
+    \end{tabular}%
+    
+\end{table}
+Wealth distribution, SCF, \citet{diaz-gimenez_facts_2011}
+\begin{table}[htbp]
+  \centering
+  
+    \begin{tabular}{cccccc}
+    \toprule
+    & Top 1\% & Top 5\% & Top 10\% & Top 20\% & Gini\\
+    Data & 30 & 51 & 64 & 79 & 0.79 \\
+Model & 30.2 & 62.1 & 75.5 & 86.2 & 0.80 \\
+\bottomrule
+    \end{tabular}%
+\end{table}
+\end{frame}
+
+\begin{frame}{Entrepreneur fiscal multiplier}
+\begin{figure}[!ht]
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=0.9\textwidth]{graph/GShockRes.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Entrepreneur fiscal multiplier}
+\begin{figure}[!ht]
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=0.9\textwidth]{graph/GShockMechanism.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Implied output multiplier}
+\begin{figure}[!ht]
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=0.9\textwidth]{graph/GShockOutput.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{State dependence: a credit crunch}
+\begin{figure}[!ht]
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=0.9\textwidth]{graph/LambdaShockRes.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{State dependence: fiscal multiplier at a credit crunch}
+\begin{figure}[!ht]
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=0.9\textwidth]{graph/GShockResStateLambda.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Conclusions}
+\begin{itemize}
+\item A new transmission mechanism of government spending: increases labor supply and encourages entrepreneurship.
+\item The entrepreneur multiplier and the implied output multiplier are larger when credit is tighter.
+\item Effects and mechanism are consistent with data.
+\end{itemize}
+\end{frame}
+
+
+\begin{comment}
+\begin{frame}{Entrepreneur multiplier over business cycle}
+\begin{figure}[!ht]
+\includegraphics[clip=true, width=0.5\textwidth]{graph/formation_state.pdf}
+\includegraphics[clip=true, width=0.5\textwidth]{graph/ncfi_state.pdf}
+\end{figure}
+\end{frame}
+
+
+
+
+
+
+
+
+
+\begin{frame}{Solution}
+KS, track $\Phi$ using $\bar{K}$. $\Phi = (z,G,\bar{K},B)$.
+
+Approximate transition rule using polynomials of $(\bar{K},B)$.
+
+$$
+\begin{aligned}
+log(\bar{K'}) = b_{1,0} + b_{1,1}log(\bar{K}) + b_{1,2}B + b_{1,3}B^2 + b_{1,4}B^3 \\ 
+log(r+\delta) = b_{2,0} + b_{2,1}log(\bar{K}) + b_{2,2}B + b_{2,3}B^2 + b_{1,4}B^3 \\ 
+log(w) = b_{3,0} + b_{3,1}log(\bar{K}) + b_{3,2}B + b_{3,3}B^2 + b_{3,4}B^3 \\ 
+log(Tr) = b_{4,0} + b_{4,1}log(\bar{K}) + b_{4,2}B + b_{4,3}B^2 + b_{4,4}B^3 \\ 
+\end{aligned}
+$$
+$b$ depends on discrete $(Z,G)$
+\end{frame}
+
+\begin{frame}{Solution: a typical $R^2$}
+At $(iZ=1,iG=1)$
+
+$$
+\begin{aligned}
+log(\bar{K'}): 0.999995 \\ 
+log(r+\delta): 0.9996 \\ 
+log(w): 0.9996 \\ 
+log(Tr): 0.9992 \\ 
+\end{aligned}
+$$
+\end{frame}
+
+\begin{frame}{Calibration}
+$u=\frac{c^{1-\sigma}}{1-\sigma}-\chi \frac{n^{1+1/ \nu}}{1+1 / \nu}$, $\sigma=2$, $\nu=0.5$
+
+$\eta$, Gumbel distribution with scale parameter 1
+
+$\gamma=0.33$, $\theta=0.85$
+
+$\varepsilon$, $\varepsilon'=\rho_{\varepsilon}\varepsilon + e'$, $\rho_{\varepsilon}=0.9322$
+
+$z$, $\rho_z=0.9$, $\sigma_z=0.01$, 3 states
+
+$G$, Bachmann et al. (2015)
+
+$\lambda=1.5$
+
+$\zeta$: Cagetti and De Nardi (2004), $\{0,\zeta_{\mu}\}$, with transition matrix $(1-p_1,p_1;1-p_2,p_2)$
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{ccccc}
+    \toprule
+    Parameters & Value & Target & Data  & Model \\
+    \midrule
+    $\beta$ & 0.9768 & r     & 0.0125 & 0.0125 \\
+    $\chi$ & 70    & $\bar{n_w}$ & 0.33  & 0.33 \\
+    $p1$ & 8.6e-04  & Entre pop rate & 0.0755  & 0.0755 \\
+    $p2$ & 0.9926 & Entre/worker wealth & 8 & 8 \\
+    $\mu_{\zeta}$ & 1.74     & Entre/worker income & 4 & 4 \\
+    $\sigma_{\varepsilon}$ & 0.096 & Gini & 0.81 & 0.81 \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+\end{frame}
+
+\begin{frame}{A negative z shock}
+\begin{figure}[!ht]
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=1\textwidth]{graph/ZShockRes.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{A positive G shock}
+\begin{figure}[!ht]
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=1\textwidth]{graph/GShockRes.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{A positive G shock in expansion and recession}
+\begin{figure}[!ht]
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=1\textwidth]{graph/GShockResState.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{A positive G shock in expansion and recession}
+\begin{figure}[!ht]
+\caption{Index of Net Business Formation, STVAR}
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=0.8\textwidth]{graph/GShockResStateData.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Todo}
+\begin{itemize}
+\item Cross-section evidence.
+\item Decompose and compare with no-entrepreneur benchmark.
+\item Stylized model to show mechanism.
+\item KS.
+\end{itemize}
+\end{frame}
+\end{comment}
+
+
+\bibliographystyle{economtex/aer}
+\bibliography{entre}
+\end{document}
+
+
+
+
+
+
