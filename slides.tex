@@ -153,12 +153,263 @@ Answers:
 \end{frame}
 
 
-
 \begin{frame}{Related literature}
 \begin{itemize}
-\item {\color{blue} Transmission mechanism of fiscal policy.} \citet{hall_by_2009}, \citet{dyrda_models_2012}, \citet{heathcote_fiscal_2005}, \citet{bachmann_welfare_2013}.
-\item {\color{blue} Entrepreneurial activity.} \citet{decker_role_2014}, \citet{quadrini_entrepreneurship_2000}, \citet{cagetti_entrepreneurship_2006}, \citet{buera_finance_2011}.
+\item {\color{blue} Mechanism of fiscal multiplier.} \citet{hall_by_2009}, \citet{dyrda_models_2012}, \citet{woodford_simple_2010}, \citet{uhlig_fiscal_2010}.
+
+\item {\color{blue} Distributional effects of fiscal policy.} \citet{heathcote_fiscal_2005}, \citet{bachmann_welfare_2013}.
+
 \item {\color{blue} State-dependent effects of government spending.} \citet{auerbach_measuring_2012}, \citet{owyang_are_2013}, \citet{fazzari_state-dependent_2015}
+
+\item {\color{blue} Entrepreneur entry and saving.} \citet{decker_role_2014}, \citet{quadrini_entrepreneurship_2000}, \citet{cagetti_entrepreneurship_2006}, \citet{buera_financial_2013}.
+
+\item {\color{blue} Heterogeneous agent model with aggregate fluctuations.}
+\citet{krusell_income_1997}, \citet{reiter_solving_2009}, \citet{winberry_lumpy_2014}.
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Model}{Mechanisms and corresponding model elements}
+\begin{itemize}
+\item Time is discrete. Continuum of Infinitely-lived households with constant measure, a corporate firm, and a government. Single consumption good. Single asset.
+\item Households receive shocks on labor productivity and entrepreneur productivity; {\color{blue}choose} to be entrepreneurs and workers; program {\color{blue}consumption/saving}, {\color{blue}labor/leisure}; face tight borrowing constraints across periods.
+\item As a worker, household works and receives wages.
+\item As an entrepreneur, household does not work; employs capital and labor to produce at market prices.
+\item Entrepreneur can finance additional capital within period {\color{blue}up to} a fraction of his own wealth due to financial frictions.
+\item A government specifying policies for {\color{blue}bond and tax}.
+\item Exogenous government spending shocks, financial shocks, and TFP shocks.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Model}{Households' problems: as an entrepreneur}
+$$
+V^E(\varepsilon,\zeta,a;\Omega) = \max_{k_D,n_D,c,a'}
+u(c,l)
++ \beta E V(\varepsilon',\zeta',a';\Omega')
+$$
+s.t.
+$$
+\begin{aligned}
+c + a' \leq \pi + a - Tax(\Omega) \\
+\pi = z \zeta (k_D^{\gamma} n_D^{1-\gamma})^{\theta}
+ - r(\Omega)(k_D-a) - \delta k_D - w(\Omega)n_D \\
+k_D \leq \lambda a \\
+a'\geq 0 \\
+l=1\\
+\end{aligned}
+$$
+\end{frame}
+
+\begin{frame}{Model}{Households' problems: as a worker}
+$$
+V^W(\varepsilon,\zeta,a;\Omega) = \max_{c,l,a'} u(c,l) + \beta E V(\varepsilon',\zeta',a';\Omega')
+$$
+s.t.
+$$
+\begin{aligned}
+c+a' \leq w(\Omega) \varepsilon(1-l) + a(1+r(\Omega)) - Tax(\Omega) \\
+a' \geq 0 \\
+0\leq l \leq 1\\
+\end{aligned}
+$$
+\end{frame}
+
+\begin{frame}{Model}{Households' problems: entrepreneur or worker?}
+$$
+V(\varepsilon,\zeta,a;\Omega) = E_{\tilde{u_E},\tilde{u_W}} \max \{V^E(\varepsilon,\zeta,a;\Omega)+\tilde{u_E},V^W(\varepsilon,\zeta,a;\Omega)+\tilde{u_W}\}
+$$
+$u_E,u_W$ i.i.d. Gumbel distribution.
+$$
+V(\varepsilon,\zeta,a;\Omega) = log(exp(V^E(\varepsilon,\zeta,a;\Omega))+exp(V^W(\varepsilon,\zeta,a;\Omega)))
+$$
+$$
+Pr^E(\varepsilon,\zeta,a;\Omega) = \frac{exp(V^E(\varepsilon,\zeta,a;\Omega))}
+{exp(V^E(\varepsilon,\zeta,a;\Omega))+exp(V^W(\varepsilon,\zeta,a;\Omega))}
+$$
+\end{frame}
+
+\begin{frame}{Model}{Closure}
+\begin{itemize}
+\item Corporate firm:
+$$r = z \gamma (\frac{K}{N})^{\gamma-1}, z(1-\gamma) (\frac{K}{N})^{\gamma}$$
+\item Government:
+\begin{itemize}
+\item Promise to pay interest rates of bond equal to interest rate of capital, state by state, following \citet{heathcote_fiscal_2005} and \citet{bachmann_welfare_2013}.
+\item Tax rule:
+$$
+Tax = \rho_0 + \rho_1 B + \rho_2 G
+$$
+\item Budget:
+$$
+B'= B(1+r) + G - Tax
+$$
+\end{itemize}
+\item Exogenous process:
+$log(z') = \rho_z log(z) + \varepsilon^z$,
+$G' = \rho_G G + (1-\rho_G)\bar{G} + \varepsilon^G$,
+$\lambda' = \rho_{\lambda} \lambda + (1-\rho_{\lambda})\bar{\lambda}
++\varepsilon^{\lambda}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Model}{Definition of equilibrium}
+Individual state $x=(\varepsilon,\zeta,a)$. Aggregate state $\Omega=(z,G,\lambda;B,\Phi)$.
+A recursive equilibrium is
+\begin{enumerate}
+\item Policy and value functions as functions of $(x,\Omega)$: $V(x,\Omega),V^E,V^W,Pr^E,a'^E,a'^W,n,n^D,k^D$
+\item Aggregates as functions of $\Omega$: $K(\Omega),N,w,r,Tax$
+\item Transition for $B$, $J:\Omega \rightarrow B'$. Transition for $\Phi$, $H: \Omega \rightarrow \Phi'$.
+\end{enumerate}
+\end{frame}
+\begin{frame}{Model}{Definition of equilibrium}
+\begin{enumerate}
+\item Policy and value functions solve agent's problem.
+$$V^{W,E}(x,\Omega) = \max ...
+ +\beta EV(\varepsilon',\zeta',a';z',G',\lambda';J(\Omega),H(\Omega))$$
+\item Market clear.
+$$
+\begin{aligned}
+& Labor: \int n\cdot (1-Pr^E) d\Phi = \int n^D\cdot Pr^E d\Phi + N \\
+& Asset: \int a d\Phi = \int k^D\cdot Pr^E d\Phi + K + B \\
+& Interest \ rate: r = z \gamma (\frac{K}{N})^{\gamma-1} \\
+& Wage: w = z(1-\gamma) (\frac{K}{N})^{\gamma} \\
+\end{aligned}
+$$
+\item Government policy.
+$$
+\begin{aligned}
+& Tax: Tax=\rho_0 + \rho_1 B + \rho_2 G \\
+& Bond: B' = J(B) = B(1+r) + G - Tax
+\end{aligned}
+$$
+\item Transition of $\Phi$ is consistent.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Model solutions}
+Challenges:
+\begin{itemize}
+\item Multiple aggregate shocks and continuous aggregate states. Higher moments matter. De Nardi et al. (2015), \citet{bachmann_welfare_2013}.
+\item Pure projection + perturbation (as \citet{reiter_solving_2009}) can't address state-dependent effects.
+\end{itemize}
+Solutions:
+\begin{itemize}
+\item Discretize value functions and distributions. Solve non-stochastic steady state.
+\item Solve dynamics by linear perturbation around non-stochastic steady state. State variables include the discretized distributions over individual states. Jump variables include the discretized value functions over individual states.
+\item Only use linear perturbation as {\bf forecasting rules of future value functions}. In simulations, solve decision problems and market clear conditions exactly, and update future states exactly.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Linear forecasting is very accurate}
+Forecasting error (\%):
+\begin{table}
+\begin{tabular}{cccc}
+\hline
+Vars & 1-step & 100-step & 1000-step \\
+\hline
+r & 0.4261 & & \\
+w & 0.1626 & & \\
+$Ea$ & 0.0249 & &  \\
+$Ea^2$ & 0.0181 & & \\
+$Ea^3$ & 0.0276 & & \\
+$Ea^4$ & 0.0382 & & \\
+\hline
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{comment}
+$$
+V(\varepsilon,\zeta,a;\Omega) = log(exp(V^E(\varepsilon,\zeta,a;\Omega))+exp(V^W(\varepsilon,\zeta,a;\Omega)))
+$$
+$$
+Pr^E(\varepsilon,\zeta,a;\Omega) = \frac{exp(V^E(\varepsilon,\zeta,a;\Omega))}
+{exp(V^E(\varepsilon,\zeta,a;\Omega))+exp(V^W(\varepsilon,\zeta,a;\Omega))}
+$$
+\end{comment}
+
+\begin{frame}{Calibration}{Parameters fixed exogenously}
+$u=\frac{(c^{\chi}l^{1-\chi})^{1-\sigma}}{1-\sigma}$, $\sigma=2$
+
+$F(K,L) = zK^{\gamma}L^{1-\gamma}$, $\gamma=0.36$
+
+$\varepsilon$, $\varepsilon'=\rho_{\varepsilon}\varepsilon + e'$, $\rho_{\varepsilon}=0.94$,$\sigma^2_{\varepsilon}=0.01$
+
+$z$, $\rho_z=0.75$, $\sigma_z=0.012$, US Data
+
+$G$, $\rho_G=0.8909$, $\sigma_G=0.0145\bar{G}$, US Data
+
+$\lambda$, $\rho_{\lambda}=0.9170$, $\sigma_{\lambda}=0.049$, matching anecdotal evidence (Khan and Thomas (2013)):
+\begin{quote}
+...debts falling more than $26\%$ as a financial crisis...
+...13 crises in the last 200 years (800 quarters)...
+...Average duration is 2 years...
+\end{quote}
+\end{frame}
+
+\begin{frame}{Calibration}{Parameters calibrated to match moments}
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{ccccc}
+    \toprule
+    Parameters & Value & Target & Data  & Model \\
+    \midrule
+    $\delta$ & 0.021 & r     & 0.0125 & 0.0125 \\
+    $\beta$ & 0.980 & K/Y &  10.6 & 10.85 \\
+    $\chi$ & 0.31  & $\bar{n_w}$ & 0.33  & 0.33 \\
+    \midrule
+    $p_1$ & 0.0039  & \% Entrepreneurs & 0.0755  & 0.072 \\
+    $p_2$ & 0.97 & Gini & 0.81 & 0.76 \\
+    $\mu_{\zeta}$ & 0.76    & \% Size 1-5 & 0.7510 & 0.7768 \\
+    $\sigma_{\zeta}$ & 0.23 & \% Size 6-10 & 0.1460 & 0.1124 \\
+    \midrule
+    $\theta$ & 0.76 & Capital fraction & 0.1780 & 0.1854 \\
+    $\lambda$ & 1.32 & Labor fraction & 0.2180  & 0.2086 \\
+    \midrule
+    $\bar{Tax}$ & 1.68 & G/Y & 0.2086 & 0.2086 \\
+    $\bar{B}$ & 0.3597 & B/Y & 1.2 & 1.2 \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+\end{frame}
+
+\begin{frame}{Model performance}{Size and wealth distribution}
+Size of entrepreneur firms measured by employment level, KFS
+\begin{table}[htbp]
+  \centering
+  
+    \begin{tabular}{cccccc}
+    \toprule
+    & 1-4 & 5-9 & 10-19 & 20-99 & 100+ \\
+    Data & 75.1 & 14.6 &  6.6  & 3.5  & 0.3 \\
+    Model & 77.7 & 12.4 & 5.0 & 4.9 & 0.0 \\
+    \bottomrule
+    \end{tabular}%
+    
+\end{table}
+Wealth distribution, SCF, \citet{diaz-gimenez_facts_2011}
+\begin{table}[htbp]
+  \centering
+  
+    \begin{tabular}{cccccc}
+    \toprule
+    & Top 1\% & Top 5\% & Top 10\% & Top 20\% & Gini\\
+    Data & 30 & 51 & 64 & 79 & 0.79 \\
+Model & 23.8 & 57.6 & 82.5 & 91.2 & 0.76 \\
+\bottomrule
+    \end{tabular}%
+\end{table}
+
+TODO(wenlan): business cycle property
+\end{frame}
+
+\begin{frame}{Roadmap for results}
+\begin{itemize}
+\item Entrepreneur fiscal multiplier.
+\item Implied for output.
+\item State-dependent effects.
 \end{itemize}
 \end{frame}
 
@@ -193,8 +444,9 @@ Answers:
 \begin{frame}{Output multiplier}
 {Response to +G shock at period 1}
 \begin{figure}[!ht]
-\includegraphics[width=1\textwidth]{../v151001/graph/YZModel.png}
+\includegraphics[width=0.9\textwidth]{../v151001/graph/YZModel.png}
 \end{figure}
+\citet{zeev_effects_2014}
 \end{frame}
 
 \begin{frame}{Output multiplier: heterogeneity matters}
@@ -218,6 +470,32 @@ Answers:
 \end{figure}
 \end{frame}
 
+\begin{frame}{STVAR and state-dependent response}
+Following \citet{auerbach_measuring_2012}:
+\begin{figure}[!ht]
+\includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=0.9\textwidth]{graph/GShockResStateData.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Conclusions}
+Facts:
+\begin{itemize}
+\item Government spending crowds out overall investment but crowds in entrepreneur activity of both entry and investment.
+\item The effect is larger when credit condition is worse.
+\end{itemize}
+Mechanism:
+\begin{itemize}
+\item Entrepreneur sector uses more labor than capital due to financial frictions.
+\item Change in factor prices caused by G shock increases profits of entrepreneur activity, encourages entry and investment.
+\end{itemize}
+Implications:
+\begin{itemize}
+\item An output multiplier close to data.
+\item State dependence consistent with data.
+\end{itemize}
+\end{frame}
+
+\begin{comment}
 \begin{frame}{Entrepreneur multiplier}
 \begin{figure}[!ht]
 \includegraphics[trim=1cm 6.5cm 1cm 6.5cm, clip=true, width=0.9\textwidth]{graph/entre.pdf}
